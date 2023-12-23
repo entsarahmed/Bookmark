@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookmark</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <!-- link fontawesome -->
+  <link rel="stylesheet" href="./css/all.css"/>
+  <link rel="stylesheet" href="./css/all.min.css"/>
+  <!-- end fontawesome -->
+
+  <!-- link bootstrap -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css"/>
+  <!-- end bootstrap -->
+
+<!-- link css -->
+<link rel="stylesheet" href="./css/style.css"/>
+<!-- end -->
+</head>
+<body>
+<section>
+<div class="container mx-auto">
+
+<h1 class="py-5 text-center  ">Bookmarker</h1>
+<h2 class="text-center py-5"><i class="fa-solid fa-bookmark pe-2"></i>Bookmark your favorite sites<i class="fa-solid fa-bookmark ps-2"></i></h2>
+
+<div class="field">
+  <label for="inputName"><i class="fa-solid fa-book-bookmark pe-2"></i>Site Name</label>
+<input oninput="validationName()" type="text" id="inputName" class="my-2 mb-3 rounded form-control" placeholder="Bookmark Name">
+</div>
+
+<div class="field">
+  <label id="line" for="inputURL"><i class="fa-solid fa-link pe-2"></i>Site URL</label>
+<input oninput="validationURL()" type="text" id="inputURL" class="my-2 rounded form-control" placeholder="Bookmark Name">
+</div>
+
+<button onClick="submitAdd()" class="btn btn-danger px-5 my-5 d-flex mx-auto text-center">Submit</button>
+
+<div class="popup d-none" id="popup-1">
+  <div class="overlay"></div>
+  <div class="content p-3">
+<div class="d-flex justify-content-between align-items-center py-3">
+  <div><i class="fa-solid fa-circle text-danger"></i>
+  <i class="fa-solid fa-circle text-warning"></i>
+  <i class="fa-solid fa-circle text-success"></i></div>
+  <button onclick="btnClose()"  type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+</div>
+<p>Site Name or Url is not valid, Please follow the rules below </p>
+<ul class="list-unstyled">
+  <li><i class="fa-regular fa-circle-right pe-2 text-danger"></i>Site name must contain at least 3 characters</li>
+  <li><i class="fa-regular fa-circle-right pe-2 text-danger"></i>Site URL must be a valid one</li>
+</ul>
+  </div>
+</div>
+
+
+
+<table class="table text-center my-3">
+  <thead>
+    <tr>
+      <th>Index</th>
+      <th>Website Name</th>
+      <th>Visit</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody id="containData">
+   
+  </tbody>
+</table>
+
+</div>
+</section> 
+
+
+  <!-- link js -->
+  <script src="./js/bootstrap.bundle.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

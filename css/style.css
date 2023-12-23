@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+*::selection{
+  background-color: #fec260;
+}
+*{
+  font-family: Pacifico cursive;
+  box-sizing: border-box;
+}
+section{
+  background-color: #f7ecde;
+  min-height: 100vh;
+}
+h1{
+  font-size: 2.8125rem;
+  font-family: pacifico;
+  font-weight: 500;
+  line-height:60px;
+  color: rgb(53, 46, 40);
+  display: inline-block;
+  margin: auto;
+  position: relative;
+  left: 50%;
+  transform: translatex(-50%);
+}
+h1::after{
+content: '';
+position: absolute;
+bottom: 30%;
+left: 0;
+width: 100%;
+height: 15px;
+background-color: #fec260;
+z-index: -1;
+}
+h1::before{
+  content: '';
+  position: absolute;
+  bottom: 30%;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #fec260;
+  z-index: -1;
+  transition: height .5s;
+  }
+  h1:hover:before{
+    height: 30px;
+  }
+h2{
+  font-weight: 500;
+  position: relative;
+  background: linear-gradient(to right, #09af0e, #526402, #cbf065);
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+}
+h2::after{
+  content: '';
+  position: absolute;
+  top: 20px;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  border-bottom: 2px dotted #000;
+}
+label{
+font-weight:600;
+font-size: 16px;
+}
+input[type=text]:focus {
+  box-shadow: 0 0 5pt 2pt #b8e008;
+  outline-width: 0px;
+}
+
+h2{
+  position: relative;
+}
+h2::before{
+  content: '';
+  position: absolute;
+  top: 300%;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  border-bottom: 2px dotted #000;
+}
+section{
+  position: relative;
+}
+.overlay{
+  position: absolute;
+  background: linear-gradient(to right,#00000041,#00000041);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+.content{
+  position: absolute;
+  width: 40%;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: white;
+  z-index: 2;
+}
+@media (max-width: 576px) { 
+  .content{
+    width: 100%;
+
+  }
+  h2::before{
+    top: 400px;
+    
+  }
+}
+
+
+
+
